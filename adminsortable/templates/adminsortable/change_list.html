@@ -3,13 +3,13 @@
 
 {% block extrastyle %}
 	{{ block.super }}
-	<link rel="stylesheet" href="{{ STATIC_URL }}adminsortable/css/admin.sortable.css" />
+	<link rel="stylesheet" href="{{ MEDIA_URL }}adminsortable/css/admin.sortable.css" />
 {% endblock %}
 
 {% block extrahead %}
 	{{ block.super }}
 	{% include sortable_javascript_includes_template %}
-    <script type="text/javascript" src="{{ STATIC_URL }}adminsortable/js/admin.sortable.js"></script>
+    <script type="text/javascript" src="{{ MEDIA_URL }}adminsortable/js/admin.sortable.js"></script>
 {% endblock %}
 
 {% block breadcrumbs %}
