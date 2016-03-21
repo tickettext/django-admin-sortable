@@ -1,8 +1,14 @@
 import json
 
 from django import VERSION as DJANGO_VERSION
-from django.contrib.contenttypes.generic import (GenericStackedInline,
-    GenericTabularInline)
+
+try:
+    from django.contrib.contenttypes.admin import (GenericStackedInline,
+        GenericTabularInline)
+except ImportError:
+    # Django < 1.7
+    from django.contrib.contenttypes.generic import (GenericStackedInline,
+        GenericTabularInline)
 
 DJANGO_MINOR_VERSION = DJANGO_VERSION[1]
 
